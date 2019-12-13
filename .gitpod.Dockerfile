@@ -4,6 +4,8 @@ USER root
 
 ENV PATH="~/.composer/vendor/bin:$PATH"
 
+ENV PATH="~/.symfony/bin:$PATH"
+
 RUN apt-get update \
    && apt-get install -y wget php-bcmath php-mbstring php-xml \
    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
